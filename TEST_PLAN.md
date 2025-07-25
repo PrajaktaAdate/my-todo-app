@@ -1,4 +1,4 @@
-# Test Plan / Strategy
+# Test Plan
 
 ## Objective
 Demonstrate automated testing skills for a simple React + Node.js (Express) Todo application, covering both UI and API layers.
@@ -7,8 +7,8 @@ Demonstrate automated testing skills for a simple React + Node.js (Express) Todo
 
 ## What is Being Tested
 - **Frontend (React):**
-  - Login functionality (valid, invalid, missing credentials)
-  - Todo CRUD: create, edit, delete, toggle complete
+  - Login functionality (valid, invalid)
+  - Todo CRUD: create, edit, delete
   - UI feedback/assertions after actions
 - **Backend (Node.js/Express):**
   - Authentication (login endpoint)
@@ -19,11 +19,10 @@ Demonstrate automated testing skills for a simple React + Node.js (Express) Todo
 
 ## Test Coverage Areas
 - **UI Automation (Playwright):**
-  - Login (success, failure, empty fields)
+  - Login (success, failure)
   - Add new todo
   - Edit existing todo
   - Delete todo
-  - Toggle complete
   - Assert UI reflects expected state after each action
 - **API Automation (Postman/Newman):**
   - POST /login (success, failure)
@@ -43,8 +42,6 @@ Demonstrate automated testing skills for a simple React + Node.js (Express) Todo
   - Newman enables CLI/CI execution
 - **GitHub Actions:**
   - Automates test runs for CI/CD
-- **Jest (React default):**
-  - For unit/component tests (if needed)
 
 ---
 
@@ -71,7 +68,7 @@ Demonstrate automated testing skills for a simple React + Node.js (Express) Todo
 
 ## Assumptions & Limitations
 - Backend uses in-memory storage (todos reset on server restart)
-- Only one hardcoded user (test@task.com / task@123)
+- **Only one hardcoded user (test@task.com / task@123)**
 - No persistent database or user registration
 - API and UI must be running locally for tests to pass
 - Minimal error handling for demo purposes
