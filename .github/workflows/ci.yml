@@ -38,7 +38,7 @@ jobs:
       - name: Run API tests and save HTML report
         run: newman run api-tests.postman_collection.json -r cli,html --reporter-html-export newman-report.html
       - name: Upload Newman report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: newman-report
           path: backend/newman-report.html
@@ -47,7 +47,7 @@ jobs:
           if [ -f "test.js" ]; then npx nyc --reporter=lcov node test.js; fi
       - name: Upload backend coverage report
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: backend-coverage
           path: backend/coverage
@@ -103,12 +103,12 @@ jobs:
       - name: Run Playwright tests and save HTML report
         run: npx playwright install --with-deps && npx playwright test --reporter=html
       - name: Upload Playwright report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: playwright-report
           path: tests/playwright-report
       - name: Upload Playwright test snapshots
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: playwright-snapshots
           path: tests/test-results 
