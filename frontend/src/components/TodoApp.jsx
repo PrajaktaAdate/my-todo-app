@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Todo from '../Todo'; 
 import { useNavigate } from 'react-router-dom';
 
 function TodoApp() {
