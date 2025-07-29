@@ -27,7 +27,7 @@
    ```
 2. Run the tests:
    ```bash
-   newman run api-tests.postman_collection.json
+   newman run api-tests.postman_collection.jsonnewman run api-tests.postman_collection.json
    ```
    Or to generate an HTML report:
    ```bash
