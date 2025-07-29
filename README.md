@@ -76,14 +76,9 @@ newman run api-tests.postman_collection.json
 
 Below are some example screenshots and visual snapshots from automated UI and API tests:
 
-### UI Test Snapshots
-
-
+### UI Test Snapshot
 ![Playwright UI Test Report](assets/Playwright-report.png)
-
-
-### API Test Report
-
+### API Test Snapshot
 ![Newman API Test Report](assets/Backend-result.png)
 
 > **Note:**  

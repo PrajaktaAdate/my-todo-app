@@ -91,11 +91,9 @@ jobs:
           cache-dependency-path: tests/package-lock.json
       - run: npm install
       - name: Start backend
-        run: npm start &
-        working-directory: ../backend
+        run: cd ../backend && npm start &
       - name: Start frontend
-        run: npm start &
-        working-directory: ../frontend
+        run: cd ../frontend && npm start &
       - name: Wait for servers
         run: |
           for i in {1..15}; do
